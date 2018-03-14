@@ -52,7 +52,7 @@ body.home ul li {
   font-size: 1.1em;
 }
 
-body.home .hl {
+.hl {
   background: var(--theme);
   color: white;
 }
