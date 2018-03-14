@@ -1,14 +1,19 @@
+:root {
+  --theme: #5E73FC;
+  --text: rgb(39, 39, 39);
+  --mid-grey: rgb(158, 158, 158);
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   line-height: 2;
-  color: rgb(39, 39, 39);
+  color: var(--text);
 }
 
 body {
   font-family: "Playfair Display", serif;
-  text-align: center;
   background: rgb(230, 230, 230);
 }
 
@@ -17,6 +22,10 @@ body {
   padding: 0 1em;
   margin: 3em auto;
   display: block;
+}
+
+body.home {
+  text-align: center;
 }
 
 body.home img {
@@ -43,7 +52,48 @@ body.home ul li {
   font-size: 1.1em;
 }
 
+body.home .hl {
+  background: var(--theme);
+  color: white;
+}
+
 body.home ul li~li::before {
   content: "/";
   padding: 0 10px;
+}
+
+body.content h3 {
+  font-weight: normal;
+  font-size: 1em;
+}
+
+body.content .top {
+  padding-bottom: 2em;
+  border-bottom: 1px solid var(--theme);
+}
+
+ul.abstracts li {
+  margin-top: 1.5em;
+  padding-bottom: 1.5em;
+  display: block;
+  border-bottom: 1px solid var(--mid-grey);
+}
+
+ul.abstracts h2 {
+  font-size: 1.25em;
+  line-height: 1.2em;
+  margin-bottom: 0.75em;
+}
+
+ul.abstracts .tags {
+  margin-top: 0.5em;
+}
+
+ul.abstracts .type {
+  display: inline-block;
+  background: var(--theme);
+  color: white;
+  line-height: 1.5em;
+  margin-top: 0.5em;
+  margin-right: 0.5em;
 }
